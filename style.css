@@ -4,7 +4,7 @@
     border: none;
 }
 body, html{
-    
+    height: 100%;
     color: #FCEA50;
     font-family: Andale Mono,AndaleMono,monospace;
 }
@@ -16,7 +16,6 @@ body {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('images/bg.png');
     background-position:  left top;   
-    margin: 10px 15px;
 	min-width: 1280px;
 }
 
@@ -44,6 +43,21 @@ p {
     margin: 10px 0px;
 }
 
+.wrapper {
+    min-height: 100%;
+    height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+    height: 100%;
+    margin-bottom:-55px;
+}
+#footer {
+    min-height: 40px;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+}
+#footer a {
+    margin-left: 10px;
+}
 .subtitle {
 	padding-left: 50px;
     text-align: center;
