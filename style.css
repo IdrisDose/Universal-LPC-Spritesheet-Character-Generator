@@ -1,9 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     border: none;
 }
 body, html{
@@ -56,7 +53,7 @@ p {
     height: 50px;
     max-height: 50px;
     margin-top: 10px;
-    width: 800px;
+    width: 1000px;
     margin: 5px auto;
 }
     #button-box button{
@@ -64,22 +61,18 @@ p {
         margin-left: 10px;
     }
 
-#save {
-    width: 60%;
-    min-width: 832px;
-    margin: 40px 0;
-    float: right;
-	padding-left: 15px;
-}
-a,a:visited{
-    color: #7FF1CD;
-    text-decoration: none;
+#saveAsPNG {
+    width: 190px;
+    height: 45px;
+    float: left;
+    line-height: 45px;
+    text-align: center;
     font-weight: bold;
-    font-family: Andale Mono,AndaleMono,monospace;
+    font-size: 14pt;
+    color:#FCEA50;
+    margin-left: 10px;
 }
-a:hover {
-    color: #FCEA50;
-}
+
 #source {
     width: 30%;
     min-width: 200px;
@@ -95,22 +88,15 @@ button {
     color:#FCEA50;
     font-size: 14pt;
 }
-button:hover {
+button:hover, #saveAsPNG:hover {
     color: #7FF1CD;
 }
-.button, button {
-    width: 190px;
-    height: 45px;
+.button, button, #saveAsPNG {
+    width: 190px !important;
+    height: 45px!important;
     background-image: url('images/button.png');
-    background-repeat: no-repeat;
+    background-repeat: no-repeat!important;
     font-family: Andale Mono,AndaleMono,monospace;
-}
-.button a{
-    width: 190px;
-    height: 45px;
-    line-height: 45px;
-    display: block;
-    text-align: center;
 }
 
 #previewAnimationsBox {
@@ -119,21 +105,21 @@ button:hover {
 	top: 20px;
     margin: 0 auto;
 }
-
 #chooser {
     background-color: rgba(56,56,56,0.7);
-    width: 30%;
-    min-width: 200px;
     padding-left: 20px;
     float: left;
-    font-size: 14pt;
 }
-
+#spritesheetBox{
+    background-color: rgba(56,56,56,0.7);
+    padding-left: 20px;
+    float: left;
+    min-width: 98.5%; /* Don't Judge them hack n slice skillz*/
+}
 #preview {
     width: 60%;
     min-width: 832px;
-    float: left;
-    margin-left: 10px;
+    margin: 0 auto;
     background-color: rgba(56,56,56,0.7);
 }
 
@@ -232,9 +218,16 @@ li.hasPreview>canvas {
     right: 0;
 }
 
-a {
-    border: 0;
-}
 .clearFix {
     overflow: auto;
+}
+
+a,a:visited{
+    color: #7FF1CD;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Andale Mono,AndaleMono,monospace;
+}
+a:hover {
+    color: #FCEA50;
 }

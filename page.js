@@ -87,13 +87,12 @@ $(document).ready(function() {
     
     var canvas = $("#spritesheet").get(0);
     var ctx = canvas.getContext("2d");
-    
+    var pngg = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+
     // Save canvas as PNG
     $("#saveAsPNG").click(function() {
-        Canvas2Image.saveAsPNG(canvas);
-    });
-    $("#saveAsPNG").click(function() {
-        Canvas2Image.saveAsPNG(canvas);
+        this.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        this.download = 'spritesheet.png';
     });
     
     
@@ -462,16 +461,26 @@ $(document).ready(function() {
     nextFrame();
 
     $('#spritesheet').hide();
+    $('#customizeBox').hide();
 
 });
 var spriteSheetHidden = true;
-    
+var customSpriteHidden = true;    
 function previewSprite(){
-        if(spriteSheetHidden){
-            $('#spritesheet').show('slow');
-            spriteSheetHidden = false;
-        } else {
-            $('#spritesheet').hide('slow');
-            spriteSheetHidden = true;
-        }
+    if(spriteSheetHidden){
+        $('#spritesheet').show('slow');
+        spriteSheetHidden = false;
+    } else {
+        $('#spritesheet').hide('slow');
+        spriteSheetHidden = true;
     }
+}
+function customizeSprite(){
+    if(customSpriteHidden){
+        $('#customizeBox').show('slow');
+        customSpriteHidden = false;
+    } else {
+        $('#customizeBox').hide('slow');
+        customSpriteHidden = true;
+    }
+}      
