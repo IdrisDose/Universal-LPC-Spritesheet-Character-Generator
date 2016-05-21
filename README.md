@@ -7,6 +7,9 @@ Try it out at [this link] (http://www-student.it.uts.edu.au/~igaistll/LPC_Genera
 
 ### Status
 
-New feature: I've just added previews of the actual animations. Oversize animations are still being worked on.
+I have updated it from the base version, mainly the layout and stuff, hope you like it!
 
-Please test and report issues. Contributions welcome!
+### Features
+- Can modify sprite with multiple different types of outfits and weapons
+- Added lightsabers (aww yee)
+- Adding custom sprites
